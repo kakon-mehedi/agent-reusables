@@ -12,6 +12,15 @@ Org-wide engineering standards and conventions that aren't tied to any single bu
 - [`event-standards.md`](docs/standards/event-standards.md) — RabbitMQ/Kafka messaging conventions, event contract rules
 - [`naming-conventions.md`](docs/standards/naming-conventions.md) — naming across repos, events, routing keys, code, env vars
 - [`folder-structure.md`](docs/standards/folder-structure.md) — Clean Architecture + Vertical Slice folder layout
+- [`adr-template.md`](docs/standards/adr-template.md) — blank Architecture Decision Record template
+
+`agents/` — a tool-agnostic agentic engineering pipeline (BRD → requirement spec → architecture → DDD model → API/database/event design → tickets), one markdown definition per stage, each with its own approval-gate policy:
+
+- [`requirement-agent.md`](agents/requirement-agent.md), [`architecture-agent.md`](agents/architecture-agent.md), [`ddd-agent.md`](agents/ddd-agent.md), [`api-design-agent.md`](agents/api-design-agent.md), [`database-design-agent.md`](agents/database-design-agent.md), [`event-design-agent.md`](agents/event-design-agent.md), [`ticket-agent.md`](agents/ticket-agent.md)
+
+`workflows/` — the DAG that sequences those agents:
+
+- [`new-service.workflow.yaml`](workflows/new-service.workflow.yaml) — stage order, dependencies, and which stages require human approval. Data only, not an execution engine — a human or coding agent reads it to decide what runs next.
 
 ## Usage
 
