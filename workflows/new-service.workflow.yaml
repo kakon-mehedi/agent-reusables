@@ -22,9 +22,15 @@ stages:
     requires_approval: true
     output: docs/services/<name>/requirement-spec.md
 
+  - id: edge-case-analysis
+    agent: edge-case-analyzer-agent
+    depends_on: [requirement]
+    requires_approval: true
+    output: docs/services/<name>/edge-cases.md
+
   - id: architecture
     agent: architecture-agent
-    depends_on: [requirement]
+    depends_on: [requirement, edge-case-analysis]
     requires_approval: true
     output: docs/services/<name>/architecture.md
 
