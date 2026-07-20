@@ -28,9 +28,15 @@ stages:
     requires_approval: true
     output: docs/services/<name>/edge-cases.md
 
+  - id: design-decision-analysis
+    agent: design-decision-agent
+    depends_on: [edge-case-analysis]
+    requires_approval: true
+    output: docs/services/<name>/design-decisions.md
+
   - id: architecture
     agent: architecture-agent
-    depends_on: [requirement, edge-case-analysis]
+    depends_on: [requirement, edge-case-analysis, design-decision-analysis]
     requires_approval: true
     output: docs/services/<name>/architecture.md
 
