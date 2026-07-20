@@ -7,6 +7,7 @@ Org-wide engineering standards and conventions that aren't tied to any single bu
 `docs/standards/` — engineering standards consumed by coding/architecture agents and human contributors alike:
 
 - [`api-standards.md`](docs/standards/api-standards.md) — REST/gRPC conventions, versioning, error handling, validation
+- [`coding-standards.md`](docs/standards/coding-standards.md) — SOLID, decoupling rules, a design-pattern reach-for-this table, Clean Code function/class hygiene, DRY-vs-premature-abstraction judgment
 - [`git-workflow.md`](docs/standards/git-workflow.md) — branching, commit convention, merge strategy
 - [`ddd-cqrs-standards.md`](docs/standards/ddd-cqrs-standards.md) — bounded contexts, aggregates, CQRS read/write model rules
 - [`event-standards.md`](docs/standards/event-standards.md) — RabbitMQ/Kafka messaging conventions, event contract rules
