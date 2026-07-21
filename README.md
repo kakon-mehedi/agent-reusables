@@ -13,6 +13,14 @@ Org-wide engineering standards and conventions that aren't tied to any single bu
 - [`event-standards.md`](docs/standards/event-standards.md) — RabbitMQ/Kafka messaging conventions, event contract rules
 - [`naming-conventions.md`](docs/standards/naming-conventions.md) — naming across repos, events, routing keys, code, env vars
 - [`folder-structure.md`](docs/standards/folder-structure.md) — Clean Architecture + Vertical Slice folder layout
+- [`testing-standards.md`](docs/standards/testing-standards.md) — test pyramid, mocking policy, coverage gating, flaky-test policy
+- [`observability-standards.md`](docs/standards/observability-standards.md) — structured logging, RED metrics, distributed tracing
+- [`security-standards.md`](docs/standards/security-standards.md) — AuthN/AuthZ patterns, secrets management, encryption, input security
+- [`resilience-standards.md`](docs/standards/resilience-standards.md) — circuit breaker, retry/backoff, bulkhead isolation, timeout budgets
+- [`caching-standards.md`](docs/standards/caching-standards.md) — cache-aside vs write-through, key convention, invalidation, hot-key/stampede mitigation
+- [`database-standards.md`](docs/standards/database-standards.md) — PostgreSQL write-store and MongoDB read-store mechanics
+- [`deployment-standards.md`](docs/standards/deployment-standards.md) — Docker multi-stage builds, Kubernetes autoscaling/config/secrets
+- [`documentation-standards.md`](docs/standards/documentation-standards.md) — docs-as-code, service README contents, ADR convention rules
 - [`adr-template.md`](docs/standards/adr-template.md) — blank Architecture Decision Record template
 
 `agents/` — a tool-agnostic agentic engineering pipeline (BRD → requirement spec → architecture → DDD model → API/database/event design → tickets), one markdown definition per stage, each with its own approval-gate policy:
